@@ -1,13 +1,13 @@
 ---
 name: nonprofit-rbm-logic-model
-description: Build donor-ready RBM logic models for nonprofit and NGO programs with a 5-level results chain, Theory of Change, SMART outcome indicators, SDG alignment, and practical monitoring plans for grant design, implementation, and reporting (USAID/UN/EU).
+description: Build donor-ready Results-Based Management (RBM) logic models for nonprofit and non-governmental organization (NGO) programs with a 5-level results chain, Theory of Change, Specific-Measurable-Achievable-Relevant-Time-bound (SMART) outcome indicators, Sustainable Development Goals (SDG) alignment, and practical monitoring plans for grant design, implementation, and reporting aligned with United States Agency for International Development (USAID), United Nations (UN), and European Union (EU) requirements.
 ---
 
-# Nonprofit RBM Logic Model
+# Nonprofit Results-Based Management (RBM) Logic Model
 
 ## Goal
 
-Produce a complete, donor-ready RBM logic model that clearly links resources to long-term change and includes measurable indicators and monitoring guidance.
+Produce a complete, donor-ready Results-Based Management (RBM) logic model that clearly links resources to long-term change and includes measurable indicators and monitoring guidance.
 
 ## Workflow
 
@@ -16,7 +16,7 @@ Produce a complete, donor-ready RBM logic model that clearly links resources to 
 - Target population and inclusion priorities
 - Geography and implementation scope
 - Time horizon (for example, 1 year outcomes vs 3-5 year impact)
-- Donor/reporting constraints (USAID, UN, EU, internal template)
+- Donor/reporting constraints (United States Agency for International Development (USAID), United Nations (UN), European Union (EU), internal template)
 - Baseline availability and data constraints
 
 2. Ask up to five high-leverage clarifying questions when critical context is missing. If details remain unknown, proceed with explicit assumptions.
@@ -34,11 +34,11 @@ Produce a complete, donor-ready RBM logic model that clearly links resources to 
 - Use concrete, time-bound outcome statements where possible
 
 5. Define indicators for each outcome:
-- Provide 3-5 SMART indicators per outcome
+- Provide 3-5 Specific-Measurable-Achievable-Relevant-Time-bound (SMART) indicators per outcome
 - Include definition/formula, baseline, target, frequency, and data source
 - Include disaggregation guidance (for example sex, age, location) when relevant
 
-6. Map outcomes and impact to relevant SDG goals and targets only when there is a defensible link.
+6. Map outcomes and impact to relevant Sustainable Development Goals (SDG) goals and targets only when there is a defensible link.
 
 7. Propose a practical data collection plan:
 - Baseline and endline timing
@@ -54,7 +54,7 @@ Produce a complete, donor-ready RBM logic model that clearly links resources to 
 2. Executive Summary (2-3 sentences)
 3. Logic Model Table (Inputs to Impact)
 4. Outcome Indicators (group by outcome)
-5. SDG Alignment (goal and target references)
+5. Sustainable Development Goals (SDG) Alignment (goal and target references)
 6. Data Collection Plan (method, frequency, owner)
 7. Assumptions and Risks (recommended when uncertainty exists)
 
@@ -73,5 +73,5 @@ Produce a complete, donor-ready RBM logic model that clearly links resources to 
 Use `references/rbm-framework.md` when you need:
 - Indicator templates
 - Sector-specific indicator ideas
-- SDG mapping shortcuts
+- Sustainable Development Goals (SDG) mapping shortcuts
 - A complete worked example
