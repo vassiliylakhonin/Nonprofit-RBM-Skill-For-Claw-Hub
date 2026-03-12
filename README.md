@@ -1,65 +1,89 @@
-# Nonprofit Results-Based Management Skill for ClawHub
+# Nonprofit RBM Logic Model (OpenClaw Skill)
 
-A practical OpenClaw skill for nonprofit and non-governmental organization (NGO) teams that need donor-ready Results-Based Management (RBM) logic models.
+<p align="left">
+  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/stargazers"><img src="https://img.shields.io/github/stars/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Stars"></a>
+  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/network/members"><img src="https://img.shields.io/github/forks/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Forks"></a>
+  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/issues"><img src="https://img.shields.io/github/issues/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Issues"></a>
+  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/commits/main"><img src="https://img.shields.io/github/last-commit/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Last Commit"></a>
+  <a href="https://clawhub.ai/vassiliylakhonin/nonprofit-rbm-logic-model"><img src="https://img.shields.io/badge/ClawHub-install-blue?style=for-the-badge" alt="Install on ClawHub"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License"></a>
+</p>
 
-## What this skill does
+Build donor-ready Results-Based Management (RBM) logic models for nonprofit and NGO programs with:
+- Theory of Change
+- 5-level results chain (Inputs → Activities → Outputs → Outcomes → Impact)
+- SMART outcome indicators
+- SDG alignment
+- Practical monitoring and data collection plans
 
-- Builds a 5-level results chain: Inputs -> Activities -> Outputs -> Outcomes -> Impact
-- Adds a Theory of Change (if/then pathway + key assumptions)
-- Proposes Specific-Measurable-Achievable-Relevant-Time-bound (SMART) outcome indicators
-- Maps outcomes to relevant Sustainable Development Goals (SDG) goals/targets
-- Recommends a monitoring and data collection plan
+---
 
-## Who this is for
+## Why this skill
+
+Most grant/program drafts fail on execution clarity. This skill enforces:
+- measurable outcomes,
+- explicit assumptions,
+- realistic monitoring,
+- and donor-aligned structure (USAID / UN / EU style reporting).
+
+---
+
+## Best fit users
 
 - Nonprofit program managers
-- Monitoring and Evaluation (M&E) / Monitoring, Evaluation, Accountability, and Learning (MEAL) specialists
+- M&E / MEAL specialists
 - Grant writers
 - NGO consultants
-- Social impact startups preparing donor-facing plans
+- Social-impact teams preparing donor proposals
+
+---
 
 ## Install
-
-From ClawHub:
 
 ```bash
 clawhub install nonprofit-rbm-logic-model
 ```
 
-Optional pinned version:
+Install pinned version:
 
 ```bash
-clawhub install nonprofit-rbm-logic-model --version 1.0.3
+clawhub install nonprofit-rbm-logic-model --version 1.0.5
 ```
 
-## Use in OpenClaw
+---
 
-Prompt with the skill name:
+## Quick usage
 
 ```text
-Use $nonprofit-rbm-logic-model to design a Results-Based Management logic model for [program], including Theory of Change, Specific-Measurable-Achievable-Relevant-Time-bound indicators, Sustainable Development Goals mapping, and a monitoring plan.
+Use $nonprofit-rbm-logic-model to design an RBM logic model for [program], including Theory of Change, SMART indicators, SDG mapping, and a monitoring plan.
 ```
 
-## Output format
+---
 
-1. Theory of Change (if/then statement plus causal pathway and key assumptions)
-2. Executive Summary (2-3 sentences)
-3. Logic Model Table (Inputs to Impact)
-4. Outcome Indicators (group by outcome)
-5. Sustainable Development Goals (SDG) Alignment (goal and target references)
-6. Data Collection Plan (method, frequency, owner)
-7. Assumptions and Risks (recommended when uncertainty exists)
+## Typical output
+
+1. Theory of Change
+2. Executive Summary
+3. Logic Model (Inputs → Impact)
+4. Outcome Indicators (with baseline/target/frequency/source)
+5. SDG Alignment (Goal + Target references)
+6. Monitoring & Data Collection Plan
+7. Assumptions, Risks, and Mitigations
+
+---
 
 ## Repository structure
 
 ```text
 skills/.experimental/nonprofit-rbm-logic-model/
-  LICENSE.txt
   SKILL.md
-  agents/openai.yaml
   references/rbm-framework.md
+  agents/openai.yaml
+  LICENSE.txt
 ```
+
+---
 
 ## License
 
-MIT. See `skills/.experimental/nonprofit-rbm-logic-model/LICENSE.txt`.
+MIT

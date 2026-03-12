@@ -1,77 +1,82 @@
 ---
 name: nonprofit-rbm-logic-model
-description: Build donor-ready Results-Based Management (RBM) logic models for nonprofit and non-governmental organization (NGO) programs with a 5-level results chain, Theory of Change, Specific-Measurable-Achievable-Relevant-Time-bound (SMART) outcome indicators, Sustainable Development Goals (SDG) alignment, and practical monitoring plans for grant design, implementation, and reporting aligned with United States Agency for International Development (USAID), United Nations (UN), and European Union (EU) requirements.
+description: >-
+  Build donor-ready Results-Based Management (RBM) logic models for nonprofit
+  and NGO programs: Theory of Change, 5-level results chain (inputs→impact),
+  SMART outcome indicators, SDG alignment, and practical monitoring plans. Use
+  for grant proposals, program design, M&E frameworks, and donor reporting
+  (USAID/UN/EU).
 ---
 
-# Nonprofit Results-Based Management (RBM) Logic Model
+# Nonprofit RBM Logic Model
 
-## Goal
+## Objective
 
-Produce a complete, donor-ready Results-Based Management (RBM) logic model that clearly links resources to long-term change and includes measurable indicators and monitoring guidance.
+Produce a decision-ready, donor-aligned RBM package that links activities to outcomes and impact with measurable indicators and realistic monitoring.
 
-## Workflow
+## Execution Workflow
 
-1. Gather core context before drafting:
-- Program problem and intervention summary
-- Target population and inclusion priorities
-- Geography and implementation scope
-- Time horizon (for example, 1 year outcomes vs 3-5 year impact)
-- Donor/reporting constraints (United States Agency for International Development (USAID), United Nations (UN), European Union (EU), internal template)
-- Baseline availability and data constraints
+1. Collect minimum context before drafting:
+   - Problem statement and intervention summary
+   - Target population (including inclusion priorities)
+   - Geography and implementation scope
+   - Time horizon (for example, 12-month outcomes, 3-5 year impact)
+   - Donor/reporting constraints (USAID, UN, EU, or custom template)
+   - Baseline/data availability constraints
 
-2. Ask up to five high-leverage clarifying questions when critical context is missing. If details remain unknown, proceed with explicit assumptions.
+2. Ask up to five high-leverage clarifying questions if key inputs are missing.
+   - If details remain unknown, proceed with explicit assumptions.
 
-3. Build a five-level logic model:
-- Inputs
-- Activities
-- Outputs
-- Outcomes (short/medium term changes)
-- Impact (long-term societal/system change)
+3. Build the results chain with strict level separation:
+   - Inputs
+   - Activities
+   - Outputs
+   - Outcomes (short/medium term)
+   - Impact (long term)
 
-4. Keep causal logic explicit and testable:
-- Avoid listing activities as outcomes
-- Avoid describing deliverables as impact
-- Use concrete, time-bound outcome statements where possible
+4. Keep causal logic testable:
+   - Do not label activities as outcomes
+   - Do not label deliverables as impact
+   - Use time-bound, observable outcome statements
 
-5. Define indicators for each outcome:
-- Provide 3-5 Specific-Measurable-Achievable-Relevant-Time-bound (SMART) indicators per outcome
-- Include definition/formula, baseline, target, frequency, and data source
-- Include disaggregation guidance (for example sex, age, location) when relevant
+5. Define outcome indicators (3-5 per outcome):
+   - Indicator name and definition/formula
+   - Baseline and target
+   - Disaggregation (sex/age/location, when relevant)
+   - Data source and collection frequency
 
-6. Map outcomes and impact to relevant Sustainable Development Goals (SDG) goals and targets only when there is a defensible link.
+6. Map outcomes and impact to SDGs only when evidence-based linkage exists.
 
-7. Propose a practical data collection plan:
-- Baseline and endline timing
-- Routine monitoring frequency
-- Follow-up windows (for example 3/6/12 months)
-- Data quality checks and accountability owner
+7. Build a practical monitoring plan:
+   - Baseline/endline schedule
+   - Routine monitoring cadence
+   - Follow-up windows (for example 3/6/12 months)
+   - Data quality checks and accountable owner
 
-8. Return output in the required format.
+8. Return output in the required structure.
 
-## Output Format
+## Required Output Structure
 
-1. Theory of Change (if/then statement plus causal pathway and key assumptions)
+1. Theory of Change (if/then logic + assumptions)
 2. Executive Summary (2-3 sentences)
-3. Logic Model Table (Inputs to Impact)
-4. Outcome Indicators (group by outcome)
-5. Sustainable Development Goals (SDG) Alignment (goal and target references)
-6. Data Collection Plan (method, frequency, owner)
-7. Assumptions and Risks (recommended when uncertainty exists)
+3. Logic Model (Inputs → Activities → Outputs → Outcomes → Impact)
+4. Outcome Indicators (grouped by outcome)
+5. SDG Alignment (goal + target references)
+6. Monitoring & Data Collection Plan (method, cadence, owner)
+7. Assumptions, Risks, and Mitigations
 
-## Quality Rules
+## Quality Standards
 
-- Prefer numeric targets and time bounds over vague language.
-- Distinguish outputs from outcomes:
-  - Outputs are products/services delivered.
-  - Outcomes are changes in behavior, conditions, or systems.
-- Keep impact long-term unless user requests a shorter horizon.
-- State assumptions explicitly for any inferred values.
-- Flag missing baseline data and suggest how to collect it.
+- Prefer numeric, time-bound targets over qualitative claims.
+- Distinguish outputs vs outcomes with discipline.
+- Keep impact long-term unless user explicitly asks otherwise.
+- Surface uncertainty and assumptions explicitly.
+- Flag missing baseline data and propose a collection method.
 
-## Reference Usage
+## Reference File
 
-Use `references/rbm-framework.md` when you need:
+Read `references/rbm-framework.md` when you need:
 - Indicator templates
 - Sector-specific indicator ideas
-- Sustainable Development Goals (SDG) mapping shortcuts
-- A complete worked example
+- SDG mapping shortcuts
+- Worked examples
