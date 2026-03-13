@@ -54,6 +54,9 @@ Produce a decision-ready, donor-aligned RBM package that links activities to out
    - Data quality checks and accountable owner
 
 8. Return output in the required structure.
+9. When structured JSON is available, run deterministic quality gate:
+   - `scripts/rbm_gate.py --input <rbm.json>`
+   - Include gate score/verdict in the final response.
 
 ## Required Output Structure
 
@@ -64,6 +67,7 @@ Produce a decision-ready, donor-aligned RBM package that links activities to out
 5. SDG Alignment (goal + target references)
 6. Monitoring & Data Collection Plan (method, cadence, owner)
 7. Assumptions, Risks, and Mitigations
+8. Gate Status (Pass / Conditional Pass / Fail, score X/100 when applicable)
 
 ## Quality Standards
 
@@ -72,6 +76,7 @@ Produce a decision-ready, donor-aligned RBM package that links activities to out
 - Keep impact long-term unless user explicitly asks otherwise.
 - Surface uncertainty and assumptions explicitly.
 - Flag missing baseline data and propose a collection method.
+- Include deterministic gate evidence when machine-readable output is provided.
 
 ## Reference File
 
