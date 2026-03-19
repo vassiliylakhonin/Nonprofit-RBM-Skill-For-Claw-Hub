@@ -1,88 +1,64 @@
-# Nonprofit RBM Logic Model (OpenClaw Skill)
+# Nonprofit Impact Orchestra (OpenClaw Skill)
 
-<p align="left">
-  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/stargazers"><img src="https://img.shields.io/github/stars/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Stars"></a>
-  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/network/members"><img src="https://img.shields.io/github/forks/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Forks"></a>
-  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/issues"><img src="https://img.shields.io/github/issues/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Issues"></a>
-  <a href="https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/commits/main"><img src="https://img.shields.io/github/last-commit/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub?style=for-the-badge" alt="Last Commit"></a>
-  <a href="https://clawhub.ai/vassiliylakhonin/nonprofit-rbm-logic-model"><img src="https://img.shields.io/badge/ClawHub-install-blue?style=for-the-badge" alt="Install on ClawHub"></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License"></a>
-</p>
+`nonprofit-impact-orchestra` helps NGO and nonprofit teams turn rough ideas, donor calls, or draft proposals into donor-ready project packages.
 
-Build donor-ready Results-Based Management (RBM) logic models for nonprofit and NGO programs with:
-- Theory of Change
-- 5-level results chain (Inputs → Activities → Outputs → Outcomes → Impact)
-- SMART outcome indicators
-- SDG alignment
-- Practical monitoring and data collection plans
+## What this skill does
 
----
-
-## Why this skill
-
-Most grant/program drafts fail on execution clarity. This skill enforces:
-- measurable outcomes,
-- explicit assumptions,
-- realistic monitoring,
-- and donor-aligned structure (USAID / UN / EU style reporting).
-
----
-
-## Best fit users
-
-- Nonprofit program managers
-- M&E / MEAL specialists
-- Grant writers
-- NGO consultants
-- Social-impact teams preparing donor proposals
-
----
+- Builds concept notes, LOI/EOI drafts, and full proposal packages
+- Produces RBM chain, Theory of Change, and logframe matrix
+- Generates MEAL plan, GESI analysis, SDG alignment, and safeguarding checks
+- Drafts budget structure, co-financing summary, and delivery logic
+- Runs donor adaptation and peer-review style readiness scoring
 
 ## Install
 
 ```bash
-clawhub install nonprofit-rbm-logic-model
+clawhub install nonprofit-impact-orchestra
 ```
-
-Install pinned version:
-
-```bash
-clawhub install nonprofit-rbm-logic-model --version 1.0.5
-```
-
----
 
 ## Quick usage
 
 ```text
-Use $nonprofit-rbm-logic-model to design an RBM logic model for [program], including Theory of Change, SMART indicators, SDG mapping, and a monitoring plan.
+orchestra Youth-led reconstruction and green skills training in war-affected regions of Ukraine, €180k, 18 months, partners: local civil society and EU-linked actors
 ```
 
----
+```text
+orchestra --cfp [paste donor call text]
+```
 
-## Typical output
+```text
+orchestra --peer-review [paste proposal draft]
+```
 
-1. Theory of Change
-2. Executive Summary
-3. Logic Model (Inputs → Impact)
-4. Outcome Indicators (with baseline/target/frequency/source)
-5. SDG Alignment (Goal + Target references)
-6. Monitoring & Data Collection Plan
-7. Assumptions, Risks, and Mitigations
+## Common modes
 
----
+- `orchestra [description]` — full package
+- `orchestra --express [description]` — fast first draft
+- `orchestra --concept [description]` — concept note only
+- `orchestra --loi [description]` — LOI/EOI draft
+- `orchestra --review [draft]` — proposal quality review
+- `orchestra --peer-review [draft]` — donor-style scoring simulation
+- `orchestra --json [description]` — structured JSON output
+
+## Typical outputs
+
+1. Elevator pitch + executive summary
+2. Strategic context + stakeholder mapping
+3. RBM chain + Theory of Change + logframe
+4. Indicator set + MEAL plan
+5. GESI + safeguarding / Do No Harm checks
+6. SDG alignment
+7. Budget table + co-financing summary
+8. Risk matrix, scenarios, compliance score, and confidence report
 
 ## Repository structure
 
 ```text
-skills/.experimental/nonprofit-rbm-logic-model/
-  SKILL.md
-  references/rbm-framework.md
-  agents/openai.yaml
-  LICENSE.txt
+.
+├── SKILL.md
+├── README.md
+└── LICENSE
 ```
-
----
 
 ## License
 
