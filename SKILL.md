@@ -183,6 +183,15 @@ text
 6. Keep language natural and human.
 7. Build for implementation, not only for approval.
 8. Never fabricate baselines, evidence, partner commitments, or donor fit.
+
+Decision-Grade Donor Additions (required in standard/deep mode)
+text
+9. Add an Evidence Note with 3–8 sources, date stamps, and clear tags: [HIGH]/[MEDIUM]/[UNVERIFIED].
+10. For any budget line above 10% of total, include unit-cost assumptions (quantity × unit rate) and a short rationale.
+11. Add Compliance Gates with Go / Conditional Go / No-Go checks before submission.
+12. Separate verified baselines from placeholders; placeholders must be labeled [UNVERIFIED] with owner + due date.
+13. Include a 2-week validation sprint plan (data to verify, partner confirmations, budget checks, and stop/go trigger).
+
 Confidence Labels
 text
 [HIGH]       — verified or widely supported
