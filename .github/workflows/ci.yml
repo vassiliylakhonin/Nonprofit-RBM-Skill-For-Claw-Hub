@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  validate-skill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate SKILL.md exists
+        run: test -f SKILL.md
+
+      - name: Validate required frontmatter fields
+        run: |
+          head -n 30 SKILL.md > /tmp/frontmatter.txt
+          grep -q '^---$' /tmp/frontmatter.txt
+          grep -q '^name:' /tmp/frontmatter.txt
+          grep -q '^description:' /tmp/frontmatter.txt
+
+      - name: Validate safety guardrails mention
+        run: |
+          grep -qi 'Do not invent citations\|Do not invent' SKILL.md
+          grep -qi 'legal or financial' SKILL.md
