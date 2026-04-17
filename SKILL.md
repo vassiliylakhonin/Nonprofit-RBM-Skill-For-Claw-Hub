@@ -1,154 +1,151 @@
 ---
-name: nonprofit-impact-orchestra
-description: Generate donor-ready nonprofit project packages for grants, concept notes, logframes, MEAL plans, budgets, safeguarding reviews, and funder adaptation. Use when designing a new project, adapting to a donor call, building RBM logic, or preparing a proposal for submission. Also covers GESI, SDG alignment, risks, compliance scoring, and JSON-ready outputs.
+name: nonprofit-proposal-decision-engine
+description: Build submission-ready nonprofit grant packages with strict evidence discipline and decision gating. Use when preparing or reviewing concept notes, LOIs, full proposals, logframes, RBM/ToC, MEAL plans, budgets, donor-fit adaptation, and pre-submission risk checks. Use for NGO teams, grant writers, MEAL leads, and consultants who need actionable outputs, not generic prose. Do not use for legal or financial sign-off, fabricated evidence, fake citations, or guaranteed funding claims.
 ---
 
-# Nonprofit Impact Orchestra
+# Nonprofit Proposal Decision Engine
 
-Turn rough nonprofit ideas, donor calls, or draft proposals into donor-ready packages.
+Produce donor-ready proposal artifacts and a defensible submission decision.
 
-## Important Usage Note
+## Positioning
 
-`orchestra ...` examples below are **invocation patterns**, not a required local binary.
-Use them as mode labels when handling user requests in chat.
+- One-line value: convert messy project inputs into a funder-aligned package plus a hard Go, Conditional Go, or No-Go decision.
+- Best users: NGO grant managers, proposal consultants, MEAL leads, and program directors.
+- Use when: drafting from scratch, adapting to donor call text, or auditing a near-final proposal.
+- Do not use when: user asks for invented data or citations, legal guarantees, accounting sign-off, or style polish without verifiability.
+- Differentiator: prioritize decision quality and traceability over narrative flourish.
 
-## Invocation Patterns
+## Operating contract
 
-- `orchestra [project description]`
-- `orchestra --express [description]`
-- `orchestra --concept [description]`
-- `orchestra --loi [description]`
-- `orchestra --cfp [paste donor call text]`
-- `orchestra --review [paste proposal text]`
-- `orchestra --peer-review [paste proposal text]`
-- `orchestra --donor-fit [description]`
-- `orchestra --json [description]`
+1. Optimize for submission quality, not verbosity.
+2. Separate facts, assumptions, hypotheses, and unknowns in every substantial output.
+3. Refuse fabricated certainty.
+4. Ask only blocking questions.
+5. If evidence is weak, downgrade confidence and produce a verification plan.
+6. Prefer tables and checklists over long prose.
+7. Escalate risks early, especially compliance, safeguarding, partner reality, and budget logic.
 
-## Core Rules
+## Input contract (minimum required fields)
 
-1. Be donor-ready; never fake certainty.
-2. Preserve realism over grandiosity.
-3. Flag weak or unverifiable claims explicitly.
-4. Ask only minimum blocking questions.
-5. Prefer structured outputs over long prose.
-6. Build for implementation, not just approval.
-7. Never fabricate baselines, evidence, partner commitments, or donor fit.
-8. Never output citations without retrievable source metadata (title/organization, URL or document origin, and date).
+Collect or infer these fields first:
+- donor or call identifier (or explicit “no specific donor”),
+- geography and target group,
+- problem statement,
+- intervention scope,
+- budget envelope,
+- timeline,
+- implementing partners,
+- requested output mode.
 
-## Evidence & Source Policy (Mandatory)
+If 2 or more critical fields are missing, stop full drafting and return:
+- `Missing Critical Inputs`,
+- up to 5 blocking questions,
+- interim skeleton only.
 
-### Confidence Labels
-- `[HIGH]` — verified with retrievable source
-- `[MEDIUM]` — plausible but incomplete evidence
-- `[UNVERIFIED]` — claim needs manual verification
+## Modes
 
-### Source Requirements
-For each source in an Evidence Note, include:
-- source title or organization,
-- URL (or explicit non-URL origin provided by user),
-- publication/access date,
-- confidence label.
+Use one mode explicitly:
 
-### Source-Limited Mode (Fallback)
-If reliable retrieval is unavailable (no web/tool access and no user-provided sources):
-1. Do **not** invent sources or links.
-2. Replace Evidence Note with `Evidence Needed`.
-3. Mark unsupported claims as `[UNVERIFIED]`.
-4. Add `owner + due date` for each verification item.
+1. `mode=concept`
+   - Output: concept note draft plus top risks.
+2. `mode=loi`
+   - Output: LOI-ready narrative, budget summary, and compliance flags.
+3. `mode=full`
+   - Output: full proposal package with core sections.
+4. `mode=review`
+   - Output: diagnostic review of existing draft plus fix plan.
+5. `mode=donor-fit`
+   - Output: donor alignment matrix plus adaptation edits.
+6. `mode=express`
+   - Output: lean package for fast turnaround.
 
-## Decision-Grade Additions (standard/deep mode)
-
-1. Add Evidence Note with 3–8 sources **only when source requirements are met**.
-2. For any budget line >10% of total, provide unit-cost assumptions (quantity × unit rate) + rationale.
-3. Add Compliance Gates: `Go / Conditional Go / No-Go` before submission.
-4. Separate verified baselines from placeholders.
-5. Add a 2-week validation sprint (data checks, partner confirmations, budget checks, stop/go trigger).
+Default mode: `review` if user provides draft text, otherwise `concept`.
 
 ## Workflow
 
-1. **Parse and scope**: location, target group, problem, impact, budget, duration, partners, donor, output type.
-2. **Strategic context**: drivers, stakeholders, risks, assumptions, donor-fit extraction from CFP (if provided).
-3. **Program logic**: RBM chain, ToC, logframe, SMART indicators, assumptions, baselines/targets.
-4. **MEAL + GESI + SDG**: accountability loop, inclusion analysis, SDG mapping.
-5. **Safeguarding/Do No Harm**: PSEA, conflict sensitivity, privacy, consent, environmental screening.
-6. **Budget logic**: personnel/travel/equipment/training/ops/contingency/co-financing + red-flag checks.
-7. **Draft/adapt**: donor-aligned framing, structure, language.
-8. **Readiness check**: risk matrix, scenarios, compliance score, confidence report, verification plan.
+1. Scope: parse inputs, constraints, deadline, and donor expectations.
+2. Donor-fit extraction: extract explicit criteria from donor text if available.
+3. Logic architecture: build Problem to Activities to Outputs to Outcomes to Impact chain.
+4. Measurement layer: define SMART indicators, baselines, targets, means of verification, cadence, and owner.
+5. Risk and safeguards: evaluate safeguarding, conflict sensitivity, privacy and consent, delivery risks.
+6. Budget integrity: build line-item rationale; for any line greater than 10 percent of total, provide quantity times unit rate logic.
+7. Submission gate: issue Go, Conditional Go, or No-Go with explicit conditions and owners.
+8. Verification plan: produce a short due diligence checklist with deadlines.
 
-## Default Delivery Package
+## Required output structure
 
-00. Elevator Pitch  
-01. Executive Summary  
-02. Concept Note (if requested)  
-03. Strategic Context  
-04. Stakeholder Mapping  
-05. GESI Analysis  
-06. Safeguarding / Do No Harm Checklist  
-07. RBM Chain  
-08. Theory of Change  
-09. Logframe Matrix  
-10. MEAL Plan  
-11. SDG Alignment  
-12. Budget Table  
-13. Co-financing Summary  
-14. Sustainability / Exit Strategy  
-15. Partnership Structure  
-16. Donor Adaptation Notes  
-17. Risk Matrix and Scenarios  
-18. Human Impact Narrative  
-19. Compliance Score  
-20. Confidence Report  
-21. Sources / Traceability (or `Evidence Needed` in source-limited mode)  
-22. JSON Export Block
+Always return sections in this order:
 
-## Compliance Score Format
+1. `Decision Summary`
+   - Verdict: `Go | Conditional Go | No-Go`
+   - Confidence: `High | Medium | Low`
+   - 3 to 5 key reasons.
 
-```text
-Compliance Score: XX/100
-✅ GESI indicators present
-✅ SDG alignment mapped
-⚠️ Sustainability needs strengthening
-❌ Partner MoU missing
-```
+2. `Facts / Assumptions / Hypotheses / Unknowns`
+   - Four clearly separated lists.
 
-## JSON Output Skeleton
+3. `Core Proposal Artifacts`
+   - Executive summary
+   - RBM chain or ToC
+   - Logframe table
+   - MEAL mini-plan
+   - Budget logic summary
+   - Risk and safeguarding matrix
+   - In express mode, keep each artifact concise.
 
-```json
-{
-  "project": {},
-  "executive_summary": "",
-  "concept_note": "",
-  "strategic_context": {},
-  "stakeholders": [],
-  "rbm_chain": {},
-  "theory_of_change": {},
-  "logframe": [],
-  "meal_plan": [],
-  "gesi_analysis": {},
-  "safeguarding": {},
-  "budget": {},
-  "co_financing": {},
-  "sustainability": {},
-  "partnerships": {},
-  "donor_adaptation": {},
-  "risks": [],
-  "scenarios": [],
-  "sdg_alignment": [],
-  "narrative": "",
-  "compliance_score": {},
-  "confidence_report": {},
-  "sources": []
-}
-```
+4. `Donor-Fit Matrix`
+   - Criterion | Current strength | Gap | Fix action.
 
-## Limits
+5. `Evidence and Traceability`
+   - If sources are available: include title or organization, URL or origin, date, and confidence.
+   - If sources are unavailable: output `Evidence Needed` table with owner and due date.
 
-Do not:
-- guarantee donor approval,
-- replace legal/financial review,
-- fabricate data, baselines, citations, or partner commitments.
+6. `Submission Readiness Checklist`
+   - Must-pass checks before submission.
 
-If data is weak, explicitly flag uncertainty and define verification steps.
+## Evidence discipline (mandatory)
+
+### Confidence labels
+- `[HIGH]` verified and traceable.
+- `[MEDIUM]` plausible but partially supported.
+- `[LOW]` weak support.
+- `[UNVERIFIED]` missing validation.
+
+### Hard rules
+- Do not invent citations, URLs, baselines, partner commitments, or donor requirements.
+- Do not present assumptions as facts.
+- If retrieval is unavailable, state the limitation and switch to `Evidence Needed`.
+
+## Safety and trust guardrails
+
+- Never claim funding probability as certainty.
+- Never provide legal or financial compliance sign-off.
+- Never hide critical risks to make narrative look better.
+- Warn when timeline, budget, or partner capacity is unrealistic.
+- Require human verification before final submission.
+
+## Output discipline
+
+- Use compact, decision-oriented language.
+- Prefer bullets, matrices, and tables.
+- Avoid filler, slogans, and generic development jargon.
+- Adapt depth to user request:
+  - fast request: concise operational output,
+  - strategic request: deeper risk and evidence reasoning.
+
+## Refusal and fallback behavior
+
+If user requests fabrication or deceptive framing:
+1. Refuse clearly.
+2. Offer compliant alternatives:
+   - placeholder fields,
+   - verification plan,
+   - transparent assumption log.
+
+If context is too weak:
+1. Provide a minimal skeleton,
+2. list blockers,
+3. propose next best action.
 
 ## Author
 

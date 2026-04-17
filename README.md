@@ -1,55 +1,38 @@
-# Nonprofit Impact Orchestra (OpenClaw Skill)
+# Nonprofit Proposal Decision Engine (OpenClaw Skill)
 
-`nonprofit-impact-orchestra` helps NGO and nonprofit teams turn rough ideas, donor calls, or draft proposals into donor-ready project packages.
+`nonprofit-proposal-decision-engine` helps NGO teams and grant writers turn messy project inputs into donor-ready proposal artifacts and a hard submission verdict (`Go / Conditional Go / No-Go`).
 
 ## What this skill does
 
-- Builds concept notes, LOI/EOI drafts, and full proposal packages
-- Produces RBM chain, Theory of Change, and logframe matrix
-- Generates MEAL plan, GESI analysis, SDG alignment, and safeguarding checks
-- Drafts budget structure, co-financing summary, and delivery logic
-- Runs donor adaptation and peer-review style readiness scoring
+- Drafts concept notes, LOIs, and full proposal structures
+- Builds RBM/ToC logic and logframe-ready outputs
+- Produces MEAL, risk, safeguarding, and donor-fit matrices
+- Enforces evidence discipline (no fabricated citations or certainty)
+- Adds decision gating and submission readiness checks
 
 ## Install
 
 ```bash
-clawhub install nonprofit-impact-orchestra
+clawhub install nonprofit-rbm-logic-model
 ```
 
-## Quick usage
+## Quick usage patterns
 
 ```text
-orchestra Youth-led reconstruction and green skills training in war-affected regions of Ukraine, €180k, 18 months, partners: local civil society and EU-linked actors
+mode=concept [project brief]
+mode=donor-fit [project brief + donor call]
+mode=review [proposal draft]
+mode=express [fast turnaround brief]
 ```
 
-```text
-orchestra --cfp [paste donor call text]
-```
+## Output contract (always)
 
-```text
-orchestra --peer-review [paste proposal draft]
-```
-
-## Common modes
-
-- `orchestra [description]` — full package
-- `orchestra --express [description]` — fast first draft
-- `orchestra --concept [description]` — concept note only
-- `orchestra --loi [description]` — LOI/EOI draft
-- `orchestra --review [draft]` — proposal quality review
-- `orchestra --peer-review [draft]` — donor-style scoring simulation
-- `orchestra --json [description]` — structured JSON output
-
-## Typical outputs
-
-1. Elevator pitch + executive summary
-2. Strategic context + stakeholder mapping
-3. RBM chain + Theory of Change + logframe
-4. Indicator set + MEAL plan
-5. GESI + safeguarding / Do No Harm checks
-6. SDG alignment
-7. Budget table + co-financing summary
-8. Risk matrix, scenarios, compliance score, and confidence report
+1. Decision Summary
+2. Facts / Assumptions / Hypotheses / Unknowns
+3. Core Proposal Artifacts
+4. Donor-Fit Matrix
+5. Evidence and Traceability (or Evidence Needed)
+6. Submission Readiness Checklist
 
 ## Repository structure
 
