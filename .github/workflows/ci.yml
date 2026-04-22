@@ -8,21 +8,26 @@ on:
 jobs:
   validate-skill:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        skill_file:
+          - SKILL.md
+          - codex/SKILL.md
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate SKILL.md exists
-        run: test -f SKILL.md
+      - name: Validate skill file exists
+        run: test -f "${{ matrix.skill_file }}"
 
       - name: Validate required frontmatter fields
         run: |
-          head -n 30 SKILL.md > /tmp/frontmatter.txt
+          head -n 30 "${{ matrix.skill_file }}" > /tmp/frontmatter.txt
           grep -q '^---$' /tmp/frontmatter.txt
           grep -q '^name:' /tmp/frontmatter.txt
           grep -q '^description:' /tmp/frontmatter.txt
 
       - name: Validate safety guardrails mention
         run: |
-          grep -qi 'Do not invent citations\|Do not invent' SKILL.md
-          grep -qi 'legal or financial' SKILL.md
+          grep -qi 'Do not invent citations\|Do not invent' "${{ matrix.skill_file }}"
+          grep -qi 'legal\|financial' "${{ matrix.skill_file }}"
