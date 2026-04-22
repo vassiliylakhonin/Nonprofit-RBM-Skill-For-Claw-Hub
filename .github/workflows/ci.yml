@@ -29,5 +29,5 @@ jobs:
 
       - name: Validate safety guardrails mention
         run: |
-          grep -qi 'Do not invent citations\|Do not invent' "${{ matrix.skill_file }}"
+          grep -Eqi 'Do not invent citations|Do not invent|invent citations|fabrication|deceptive framing' "${{ matrix.skill_file }}"
           grep -qi 'legal\|financial' "${{ matrix.skill_file }}"
