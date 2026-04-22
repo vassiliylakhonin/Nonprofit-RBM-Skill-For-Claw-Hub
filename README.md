@@ -19,6 +19,10 @@ Decision-focused skill for turning incomplete nonprofit project inputs into a do
 clawhub install nonprofit-rbm-logic-model
 ```
 
+## Codex variant
+
+Use `codex/SKILL.md` for the same methodology in Codex skill workflows.
+
 ## Example prompts
 
 - "Review this near-final proposal and give me a Go / Conditional Go / No-Go verdict."
@@ -36,7 +40,8 @@ clawhub install nonprofit-rbm-logic-model
 
 ## Repository structure
 
-- `SKILL.md` — canonical skill specification
+- `SKILL.md` — canonical OpenClaw skill specification
+- `codex/SKILL.md` — Codex-ready skill variant
 - `README.md` — overview and usage
 - `.github/` — CI and contribution templates
 
