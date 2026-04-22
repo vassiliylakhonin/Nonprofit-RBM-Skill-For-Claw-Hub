@@ -1,54 +1,44 @@
-# Nonprofit Proposal Decision Engine (OpenClaw Skill)
+# Nonprofit Proposal Go/No-Go Engine
 
-[![ClawHub](https://img.shields.io/badge/ClawHub-nonprofit--rbm--logic--model-2bc6a4)](https://clawhub.ai/vassiliylakhonin/nonprofit-rbm-logic-model)
-[![CI](https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/actions/workflows/ci.yml)
-[![GitHub release](https://img.shields.io/github/v/release/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub)](https://github.com/vassiliylakhonin/Nonprofit-RBM-Skill-For-Claw-Hub/releases)
+[![CI](https://github.com/vassiliylakhonin/nonprofit-rbm-skill-for-claw-hub/actions/workflows/ci.yml/badge.svg)](https://github.com/vassiliylakhonin/nonprofit-rbm-skill-for-claw-hub/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-`nonprofit-proposal-decision-engine` helps NGO teams and grant writers turn messy project inputs into donor-ready proposal artifacts and a hard submission verdict (`Go / Conditional Go / No-Go`).
-
-**ClawHub page:** https://clawhub.ai/vassiliylakhonin/nonprofit-rbm-logic-model
+Decision-focused skill for turning incomplete nonprofit project inputs into a donor-aligned proposal package and a defensible submission verdict: **Go / Conditional Go / No-Go**.
 
 ## What this skill does
 
-- Drafts concept notes, LOIs, and full proposal structures
-- Builds RBM/ToC logic and logframe-ready outputs
-- Produces MEAL, risk, safeguarding, and donor-fit matrices
-- Enforces evidence discipline (no fabricated citations or certainty)
-- Adds decision gating and submission readiness checks
+- Structures rough inputs into Concept, LOI, Full Proposal, Review, Donor-Fit, or Express outputs
+- Enforces evidence discipline (facts vs assumptions vs hypotheses vs unknowns)
+- Builds RBM / Theory of Change and measurement logic
+- Stress-tests risk, safeguarding, and budget integrity
+- Produces a transparent verification plan and readiness gate
 
-## Install
+## Install (OpenClaw)
 
 ```bash
 clawhub install nonprofit-rbm-logic-model
 ```
 
-## Quick usage patterns
+## Example prompts
 
-```text
-mode=concept [project brief]
-mode=donor-fit [project brief + donor call]
-mode=review [proposal draft]
-mode=express [fast turnaround brief]
-```
+- "Review this near-final proposal and give me a Go / Conditional Go / No-Go verdict."
+- "Adapt this project to the UNICEF call and show donor-fit gaps."
+- "Build an LOI from these rough notes with explicit evidence gaps."
 
-## Output contract (always)
+## Output contract
 
 1. Decision Summary
 2. Facts / Assumptions / Hypotheses / Unknowns
 3. Core Proposal Artifacts
 4. Donor-Fit Matrix
-5. Evidence and Traceability (or Evidence Needed)
+5. Evidence and Traceability
 6. Submission Readiness Checklist
 
 ## Repository structure
 
-```text
-.
-├── SKILL.md
-├── README.md
-└── LICENSE
-```
+- `SKILL.md` — canonical skill specification
+- `README.md` — overview and usage
+- `.github/` — CI and contribution templates
 
 ## License
 
